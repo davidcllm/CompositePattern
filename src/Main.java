@@ -5,22 +5,19 @@ public class Main {
         IComponent song3 = new Song("Remember the time", "Michael Jackson");
 
         Playlist rockPlaylist = new Playlist("Playlist de rock");
-        Playlist favorites = new Playlist("Favoritas");
 
         rockPlaylist.add(song1);
         rockPlaylist.add(song2);
+        rockPlaylist.add(song3);
 
-        favorites.add(rockPlaylist); //Composite
-        favorites.add(song3);
-
-        favorites.play();
+        rockPlaylist.play();
 
         System.out.println("\n--- Cambiando velocidad ---\n");
 
-        favorites.setPlaybackSpeed(1.5f);
+        rockPlaylist.setPlaybackSpeed(2.0f);
 
         System.out.println("\n--- Reproduciendo nuevamente ---\n");
 
-        favorites.play();
+        rockPlaylist.play();
     }
 }
